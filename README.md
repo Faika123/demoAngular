@@ -34,10 +34,19 @@ Project Steps:
 - add appareil item component
 - add contact component
 - add navbar in header component
-- add routing module
+- create a git commit & push to your github repository !! 
+- create version1 branch and push to github
+- create version2 branch
+- add routing module in app-routing.module.ts
 - add appareil component content (ngFor)
 - add appareil item component content (@Input())
+- add ngIf directive to show off appareil in red
 - add appareil model
 - add appareil service and make a depency injection
+- generate a build project (ng build) (to generate your website)
 ----------
 - backend nodeJs & Express
+- pour exécuter un script nodejs (script javascript): node filename.js
+- install nodemon: npm i nodemon -g
+- insall express framework : npm install express
+- 

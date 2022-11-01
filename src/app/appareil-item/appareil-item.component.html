@@ -1,1 +1,12 @@
-<li class="list-group-item">Appareil: {{ appareilName }} - Statut: {{ getStatus() }}</li>
+<div class="card">
+  <div class="card-body">
+    <!-- String interpolation -->
+    <div
+      style="width: 15px; height: 15px; background-color: red"
+      *ngIf="appareilStatus === 'éteint'"
+    ></div>
+    <li class="list-group list-group-item">
+      Appareil: {{ appareilName }} - Statut: {{ getStatus() }}
+    </li>
+  </div>
+</div>

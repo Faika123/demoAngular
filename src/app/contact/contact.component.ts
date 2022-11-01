@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Appareil } from '../models/appareil.model';
+import { AppareilService } from '../services/appareil.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  list_apps : Appareil[];
 
-  constructor() { }
+  constructor(private appareilService: AppareilService) { 
+    this.list_apps = this.appareilService.appareils;
+  }
 
   ngOnInit(): void {
   }

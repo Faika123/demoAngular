@@ -25,3 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+----------------------------
+
+Project Steps:
+- create an front end angular project: ng new monapp
+- integrate bootstrap as css framework in (angular.json - styles part)
+- add appareils component: ng generate component appareils
+- add appareil item component
+- add contact component
+- add navbar in header component
+- add routing module
+- add appareil component content (ngFor)
+- add appareil item component content (@Input())
+- add appareil model
+- add appareil service and make a depency injection
+----------
+- backend nodeJs & Express

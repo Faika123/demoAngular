@@ -44,9 +44,11 @@ Project Steps:
 - add appareil model
 - add appareil service and make a depency injection
 - generate a build project (ng build) (to generate your website)
+
+==========
 ----------
 - backend nodeJs & Express
 - pour exécuter un script nodejs (script javascript): node filename.js
 - install nodemon: npm i nodemon -g
 - insall express framework : npm install express
-- 
+- create the API REST (Representational State Transfer) (GET, POST, PUT, DELETE)

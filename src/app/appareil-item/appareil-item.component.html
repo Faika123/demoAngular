@@ -5,7 +5,13 @@
       style="width: 15px; height: 15px; background-color: red"
       *ngIf="appareilStatus === 'éteint'"
     ></div>
-    <li class="list-group list-group-item">
+    <li
+      [ngClass]="{
+        'list-group-item': true,
+        'list-group-item-success': appareilStatus === 'allumé',
+        'list-group-item-danger': appareilStatus === 'éteint'
+      }"
+    >
       Appareil: {{ appareilName }} - Statut: {{ getStatus() }}
     </li>
   </div>

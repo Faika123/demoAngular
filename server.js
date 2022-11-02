@@ -1,3 +1,25 @@
+// version avec Express Framework
+const express = require("express")
+const path = require("path")
+
+const routeAppareil = require('./backend/routes/appareils.route')
+
+const app = express()
+
+// pour formater les données post en format json
+app.use(express.json())
+
+app.use('/appareilsAPI', routeAppareil)
+
+// chargement d'un site web static
+app.use(express.static(path.join(__dirname, "backend/www")))
+
+// lancer le server sur le port 3000
+app.listen(3000, () => {
+  console.log("server is running on port 3000...")
+});
+
+//-------
 // version avec nodejs
 /*
 const http = require('http')
@@ -11,28 +33,3 @@ server.listen(3000, '127.0.0.1', () => {
   console.log('server is running...............')
 })
 */
-
-// version avec Express Framework
-const express = require('express')
-
-const app = express()
-
-// ajout d'une route /
-app.get('/', (req, res) => {
-  res.send('Page Accueil')
-})
-
-// ajout d'une route vers appareils/
-app.get('/appareils', (req, res) => {
-  res.send('<h1>Page des appareils</h1>')
-})
-
-// ajout d'une route vers appareils/
-app.get('/contact', (req, res) => {
-  res.send('<h1 style="color:red;">Page Contact</h1>')
-})
-
-// lancer le server sur le port 3000
-app.listen(3000, () => {
-  console.log('server is running...............')
-})

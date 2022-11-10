@@ -8,6 +8,7 @@ import { AppareilItemComponent } from './appareil-item/appareil-item.component';
 import { AppareilsComponent } from './appareils/appareils.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
+import { AuthentificationComponent } from './authentification/authentification.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeaderComponent } from './header/header.component';
     AppareilItemComponent,
     AppareilsComponent,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
+    AuthentificationComponent
   ],
   imports: [
     BrowserModule,

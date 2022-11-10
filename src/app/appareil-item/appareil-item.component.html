@@ -12,7 +12,8 @@
         'list-group-item-danger': appareilStatus === 'éteint'
       }"
     >
-      Appareil: {{ appareilName }} - Statut: {{ getStatus() }}
+      <h4> Appareil: {{ appareilName }} - Statut: {{ getStatus() }} </h4>
+      <p>Last modified: {{ lastModified | date : 'short'}} </p>
     </li>
   </div>
 </div>

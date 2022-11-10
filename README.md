@@ -28,6 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ----------------------------
 
 Project Steps:
+*** Front End ***
 - create an front end angular project: ng new monapp
 - integrate bootstrap as css framework in (angular.json - styles part)
 - add appareils component: ng generate component appareils
@@ -44,11 +45,21 @@ Project Steps:
 - add appareil model
 - add appareil service and make a depency injection
 - generate a build project (ng build) (to generate your website)
+v4- Un bouton Login / Logout (avec un timer pour simuler le login)
+v4- Redirection vers Component Appareils
+v4- Découvir la notion 'Pipe' avec une date
+v4- Activer les boutons 'Allumer tout' et 'Eteindre tout' et ajouter un message de confirmation avant eteindre tout
+v4- Ajouter bouton Allumer et Etteindre pour chaque appareil
+v4- Connecter la partie backend avec notre site (Module http)
 
 ==========
-----------
+*** Back End ***
 - backend nodeJs & Express
 - pour exécuter un script nodejs (script javascript): node filename.js
 - install nodemon: npm i nodemon -g
 - insall express framework : npm install express
 - create the API REST (Representational State Transfer) (GET, POST, PUT, DELETE)
+v4- Creation des comptes MongoDb Atlas (service cloud offert) pour créer une base de données No SQL MongoDB
+v4- Ajouter un model mongoDb avec Mongoose
+v4- Tester la  connection vers le serveur MongoDb
+v4- Mettre à jour les API pour trvailler sur MongoDB

@@ -12,6 +12,8 @@ export class AppareilItemComponent implements OnInit {
   @Input()
   appareilStatus! : string;
 
+  lastModified = new Date();
+
   constructor() { }
 
   ngOnInit(): void {

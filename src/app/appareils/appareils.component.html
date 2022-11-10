@@ -8,4 +8,7 @@
   <app-appareil-item></app-appareil-item> -->
 </ul>
 <br>
-<button class="btn btn-primary" [disabled]="!isAuth">Allumer tout</button>
+<button class="btn btn-primary" (click)="onAllumerTout()">Allumer tout</button> &nbsp;
+<button class="btn btn-danger" (click)="onEteindreTout()">Eteindre tout</button>
+<br>
+<br>

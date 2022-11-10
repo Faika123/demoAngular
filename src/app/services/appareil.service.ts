@@ -14,6 +14,20 @@ export class AppareilService {
     new Appareil('XBOX', 'éteint'),
     new Appareil('Hot', 'allumé'),
   ];
-  
+
+  isAuth = false;
+
   constructor() { }
+
+  allumerTout() {
+    this.appareils.forEach(app => {
+      app.status = 'allumé';
+    });
+  }
+
+  eteindreTout() {
+    this.appareils.forEach(app => {
+      app.status = 'éteint';
+    });
+  }
 }

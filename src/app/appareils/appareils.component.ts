@@ -36,4 +36,14 @@ export class AppareilsComponent implements OnInit {
    }
 
   ngOnInit() { }
+
+  onAllumerTout() {
+    this.appareilService.allumerTout();
+  }
+
+  onEteindreTout() {
+    if (confirm('Voulez-vous éteindre tout les appareils ?')) {
+      this.appareilService.eteindreTout();
+    }
+  }
 }

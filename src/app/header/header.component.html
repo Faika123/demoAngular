@@ -5,19 +5,20 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" routerLink="appareils">Appareils</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" routerLink="contact">Contact</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active">
+          <a class="btn btn-success" routerLink="auth" (click)="onLogin()" *ngIf="!isAuth">Login</a>
+          <a class="btn btn-danger" routerLink="auth" (click)="onLogin()" *ngIf="isAuth">Logout</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li> -->
       </ul>
     </div>
   </div>

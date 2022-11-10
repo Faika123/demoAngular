@@ -1,14 +1,20 @@
-<br>
+<br />
 <h2>Mes Appareils</h2>
-<ul class="list-group" style="width: 50%;">
-  <app-appareil-item [appareilName]="app.name" [appareilStatus]="app.status" *ngFor="let app of appareils"></app-appareil-item>
+<ul class="list-group" style="width: 50%">
+  <app-appareil-item
+    [appareilName]="app.name"
+    [appareilStatus]="app.status"
+    [appareilIndex]="i"
+    *ngFor="let app of appareils; let i = index"
+  ></app-appareil-item>
 
   <!-- <app-appareil-item></app-appareil-item>
   <app-appareil-item></app-appareil-item>
   <app-appareil-item></app-appareil-item> -->
 </ul>
-<br>
-<button class="btn btn-primary" (click)="onAllumerTout()">Allumer tout</button> &nbsp;
+<br />
+<button class="btn btn-primary" (click)="onAllumerTout()">Allumer tout</button>
+&nbsp;
 <button class="btn btn-danger" (click)="onEteindreTout()">Eteindre tout</button>
-<br>
-<br>
+<br />
+<br />

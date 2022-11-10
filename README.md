@@ -52,7 +52,7 @@ v4- Activer les boutons 'Allumer tout' et 'Eteindre tout' et ajouter un message 
 v4- Ajouter bouton Allumer et Etteindre pour chaque appareil
 v4- Connecter la partie backend avec notre site (Module http)
 
-==========
+========== MEAN Stack ========
 *** Back End ***
 - backend nodeJs & Express
 - pour exécuter un script nodejs (script javascript): node filename.js

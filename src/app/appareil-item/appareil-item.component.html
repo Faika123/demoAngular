@@ -14,6 +14,7 @@
     >
       <h4> Appareil: {{ appareilName }} - Statut: {{ getStatus() }} </h4>
       <p>Last modified: {{ lastModified | date : 'short'}} </p>
+      <button class="btn btn-warning" (click)="onSwitch()">Switch</button>
     </li>
   </div>
 </div>

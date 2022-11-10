@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Appareil } from '../models/appareil.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +19,12 @@ export class AppareilService {
 
   isAuth = false;
 
-  constructor() { }
+  // injecter le service HttpClient pour pouvoir se connecter au serveur node
+  constructor(private http: HttpClient) {
+    this.chargerListAppareil().subscribe((listApp) => {
+      console.log(listApp);
+    });
+  }
 
   allumerTout() {
     this.appareils.forEach(app => {
@@ -30,4 +37,18 @@ export class AppareilService {
       app.status = 'éteint';
     });
   }
+
+  switchAppareil(i: number) {
+    if (this.appareils[i].status === 'éteint') {
+      this.appareils[i].status = 'allumé'
+    } else {
+      this.appareils[i].status = 'éteint';
+    }
+  }
+
+    // exemple de méthode pour lancer une requete http get qui retourne un Observable (Callback)
+    chargerListAppareil() : Observable<Appareil[]>{
+      return this.http.get<Appareil[]>('http://localhost:3000/listAppareils');
+    }
+
 }

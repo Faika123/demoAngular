@@ -4,9 +4,8 @@ import { AppareilService } from '../services/appareil.service';
 
 @Component({
   selector: 'app-appareils',
-  templateUrl: 'appareils.component.html'
+  templateUrl: 'appareils.component.html',
 })
-
 export class AppareilsComponent implements OnInit {
   isAuth = false;
 
@@ -28,14 +27,19 @@ export class AppareilsComponent implements OnInit {
   //   new Appareil('XBOX', 'éteint'),
   // ];
 
-  appareils : Appareil[];
+  appareils: Appareil[];
 
   // injection de dependance - dependency injection
   constructor(private appareilService: AppareilService) {
     this.appareils = this.appareilService.appareils;
-   }
+    // this.appareilService.chargerListAppareil()
+    //   .subscribe((mesAppareils) => {
+    //     this.appareils = mesAppareils;
+    //     this.appareilService.appareils = mesAppareils;
+    //   });
+  }
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   onAllumerTout() {
     this.appareilService.allumerTout();

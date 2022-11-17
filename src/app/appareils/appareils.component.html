@@ -1,6 +1,9 @@
 <br />
 <h2>Mes Appareils</h2>
-<ul class="list-group" style="width: 50%">
+<div class="spinner-border text-warning" role="status" *ngIf="isLoading">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<ul class="list-group" style="width: 50%"  *ngIf="!isLoading">
   <app-appareil-item
     [appareilName]="app.name"
     [appareilStatus]="app.status"

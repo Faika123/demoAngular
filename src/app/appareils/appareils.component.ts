@@ -27,11 +27,29 @@ export class AppareilsComponent implements OnInit {
   //   new Appareil('XBOX', 'éteint'),
   // ];
 
-  appareils: Appareil[];
+  appareils!: Appareil[];
+  isLoading = false;
 
   // injection de dependance - dependency injection
   constructor(private appareilService: AppareilService) {
-    this.appareils = this.appareilService.appareils;
+    //this.appareils = this.appareilService.appareils;
+
+
+   // --------- Test Spinner ------
+    // this.isLoading = true;
+    // setTimeout(() => {
+    //   this.isLoading = false;
+    // }, 4000);
+    // ---------------
+
+    this.isLoading = true;
+    this.appareilService.chargerListAppareil()
+      .subscribe((listAppareil) => {
+        this.appareils = listAppareil;
+        this.appareilService.appareils = listAppareil;
+        this.isLoading = false;
+    });
+
     // this.appareilService.chargerListAppareil()
     //   .subscribe((mesAppareils) => {
     //     this.appareils = mesAppareils;

@@ -46,9 +46,9 @@ export class AppareilService {
     }
   }
 
-    // exemple de méthode pour lancer une requete http get qui retourne un Observable (Callback)
-    chargerListAppareil() : Observable<Appareil[]>{
-      return this.http.get<Appareil[]>('http://localhost:3000/listAppareils');
-    }
+  // exemple de méthode pour lancer une requete http get qui retourne un Observable (Callback)
+  chargerListAppareil() : Observable<Appareil[]>{
+    return this.http.get<Appareil[]>('http://localhost:3000/appareilsAPI');
+  }
 
 }

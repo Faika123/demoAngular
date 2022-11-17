@@ -25,13 +25,13 @@ mongoose
     console.log("Problème de connection !");
   });
 
-app.get("/listAppareils", (req, res) => {
-  const Appareil = mongoose.model("Appareil", { name: String, status: String });
-  Appareil.find().then((listAppareils) => {
-    console.log(listAppareils);
-    res.status(200).json(listAppareils)
-  });
-});
+// app.get("/listAppareils", (req, res) => {
+//   // const Appareil = mongoose.model("Appareil", { name: String, status: String });
+//   Appareil.find().then((listAppareils) => {
+//     console.log(listAppareils);
+//     res.status(200).json(listAppareils)
+//   });
+// });
 
 /*
 const Appareil = mongoose.model('Appareil', { name: String, status: String });

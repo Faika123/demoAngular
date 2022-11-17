@@ -50,7 +50,11 @@ v4- Redirection vers Component Appareils
 v4- Découvir la notion 'Pipe' avec une date
 v4- Activer les boutons 'Allumer tout' et 'Eteindre tout' et ajouter un message de confirmation avant eteindre tout
 v4- Ajouter bouton Allumer et Etteindre pour chaque appareil
-v4- Connecter la partie backend avec notre site (Module http)
+v4- Connecter la partie backend avec notre site (Module HttpClientModule)
+v5- Mettre à jour Appareil Service pour consomer les API REST (backend NodeJs Express)
+v5- Ajouter Appareil Detaill component (afficher les détails d'un appareil)
+v5- Ajouter un spinner lors du chargement des appareils
+v6- Afficher détails appareils
 
 ========== MEAN Stack ========
 *** Back End ***
@@ -63,3 +67,5 @@ v4- Creation des comptes MongoDb Atlas (service cloud offert) pour créer une ba
 v4- Ajouter un model mongoDb avec Mongoose
 v4- Tester la  connection vers le serveur MongoDb
 v4- Mettre à jour les API pour trvailler sur MongoDB
+v5- Optimiser le model Appareil dans un fichier séparer
+v5- inclure le module CORS (Cross Origin Ressource Sharing)
